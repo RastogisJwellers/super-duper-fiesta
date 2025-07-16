@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rastogi’s Jewellers</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #8e44ad;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background-color: #732d91;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+    }
+
+    section {
+      padding: 40px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #8e44ad;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      background-color: #dcdcdc;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .tab-button.active {
+      background-color: #8e44ad;
+      color: white;
+      font-weight: bold;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #8e44ad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+    }
+
+    @media(max-width: 600px) {
+      .tab-button {
+        flex: 1 1 100%;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Rastogi’s Jewellers</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to Rastogi’s Jewellers</h2>
+    <p>Timeless craftsmanship. Exquisite beauty. Trusted since 1985.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Rastogi’s Jewellers, we blend tradition with elegance. Our family-run business has been a trusted name in gold, silver, and diamond jewellery in Laxmi Nagar, East Delhi.</p>
+  </section>
+<div class="product-grid">
+  <div class="product-card">
+    <img src="images/gold-ring.jpg" alt="Gold Engagement Ring">
+    <h3>Gold Engagement Ring</h3>
+    <p>₹25,000</p>
+    <button>Enquire</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/diamond-ring.jpg" alt="Diamond Solitaire Ring">
+    <h3>Diamond Solitaire Ring</h3>
+    <p>₹45,000</p>
+    <button>Enquire</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/platinum-band.jpg" alt="Silver Band">
+    <h3>Silver Band</h3>
+    <p>₹55,000</p>
+    <button>Enquire</button>
+  </div>
+</div>
+
+  <section id="products">
+    <h2>Our Jewellery Collection</h2>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab(event, 'rings')">Rings</button>
+      <button class="tab-button" onclick="showTab(event, 'necklaces')">Necklaces</button>
+      <button class="tab-button" onclick="showTab(event, 'earrings')">Earrings</button>
+      <button class="tab-button" onclick="showTab(event, 'bracelets')">Bracelets</button>
+      <button class="tab-button" onclick="showTab(event, 'bridal')">Bridal</button>
+    </div>
+
+    <div id="rings" class="tab-content active">
+      <ul>
+        <li>Gold Engagement Ring</li>
+        <li>Diamond Solitaire Ring</li>
+        <li>Platinum Wedding Band</li>
+        <li>Gemstone Cocktail Ring</li>
+        <li>Stackable Ring Set</li>
+      </ul>
+    </div>
+
+    <div id="necklaces" class="tab-content">
+      <ul>
+        <li>Gold Chain Necklace</li>
+        <li>Diamond Pendant Necklace</li>
+        <li>Pearl Strand Necklace</li>
+        <li>Nameplate Necklace</li>
+        <li>Choker Necklace</li>
+      </ul>
+    </div>
+
+    <div id="earrings" class="tab-content">
+      <ul>
+        <li>Stud Earrings (Gold, Diamond, Pearl)</li>
+        <li>Hoop Earrings</li>
+        <li>Drop Earrings</li>
+        <li>Jhumka Earrings</li>
+        <li>Ear Cuffs</li>
+      </ul>
+    </div>
+
+    <div id="bracelets" class="tab-content">
+      <ul>
+        <li>Gold Bangles</li>
+        <li>Charm Bracelets</li>
+        <li>Cuff Bracelets</li>
+        <li>Kada</li>
+        <li>Diamond Tennis Bracelet</li>
+      </ul>
+    </div>
+
+    <div id="bridal" class="tab-content">
+      <ul>
+        <li>Maang Tikka</li>
+        <li>Nath (Nose Ring)</li>
+        <li>Kamarbandh</li>
+        <li>Haath Phool</li>
+        <li>Full Bridal Set</li>
+      </ul>
+    </div>
+  </section>
+<div class="product-grid">
+  <div class="product-card">
+    <img src="images/gold-ring.jpg" alt="Gold Engagement Ring">
+    <h3>Gold Engagement Ring</h3>
+    <p>₹25,000</p>
+    <button>Enquire</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/diamond-ring.jpg" alt="Diamond Solitaire Ring">
+    <h3>Diamond Solitaire Ring</h3>
+    <p>₹45,000</p>
+    <button>Enquire</button>
+  </div>
+
+  <div class="product-card">
+    <img src="images/platinum-band.jpg" alt="Platinum Wedding Band">
+    <h3>Platinum Wedding Band</h3>
+    <p>₹55,000</p>
+    <button>Enquire</button>
+  </div>
+</div>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Address: Laxmi Nagar, East Delhi<br>
+       📞 Phone: 9560884706 / 7982139593 <br>
+       📧 Email: rastogisjewellers@example.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rastogi’s Jewellers. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showTab(evt, tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+
+      contents.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
